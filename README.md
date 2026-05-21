@@ -1,99 +1,75 @@
-🎵 Advanced SQL Data Analytics Project
+# 🎵 Advanced SQL Data Analytics Project
 
-Personal Project | January 2024
+![SQL](https://img.shields.io/badge/SQL-PostgreSQL-blue.svg)
+![Python](https://img.shields.io/badge/Python-Streamlit-orange.svg)
+![Data Analytics](https://img.shields.io/badge/Domain-Data_Analytics-green.svg)
 
-📌 Project Overview
+## 📌 Project Overview
 
-This project demonstrates advanced SQL data analysis using a music and invoice database.
-The goal was to extract meaningful business insights by writing efficient, well-structured SQL queries using PostgreSQL.
+This repository demonstrates a comprehensive SQL data analysis portfolio project using a music and invoice relational database. The core objective is to extract actionable business insights regarding employee hierarchies, customer purchasing behavior, and global invoice trends through efficient and optimized SQL queries.
 
-The analysis focuses on employee hierarchy, customer behavior, invoice trends, and music genre popularity across countries.
+This project has been engineered to showcase professional structuring, documentation, and the application of advanced SQL concepts to solve real-world analytics problems.
 
-🛠️ Technologies Used
+## 🗂️ Project Structure
 
-PostgreSQL
+The repository is modularly organized to separate logical concerns:
 
-SQL
+```text
+├── docs/                           # Architecture and performance tuning documentation
+│   ├── architecture.md             # ER Diagram and schema explanation
+│   └── performance_tuning.md       # Strategies for optimizing SQL queries
+├── queries/                        # SQL scripts segmented by analysis domain
+│   ├── 01_employee_analysis.sql
+│   ├── 02_invoice_analysis.sql
+│   ├── 03_customer_insights.sql
+│   ├── 04_advanced_cte_analysis.sql
+│   └── 05_advanced_window_functions.sql
+├── visualizations/                 # Python/Streamlit analytical dashboards
+│   └── app.py
+├── requirements.txt                # Python dependencies
+└── README.md                       # Project documentation
+```
 
-Joins
+## 🛠️ Skills and Technologies Demonstrated
 
-CTEs (Common Table Expressions)
+* **Relational Database Management:** PostgreSQL / SQLite
+* **Core SQL Constructs:** `JOIN`s, Subqueries, Aggregate Functions
+* **Advanced SQL:** Common Table Expressions (CTEs), Window Functions (`LAG`, `NTILE`, `ROW_NUMBER`), Rolling Averages
+* **Performance Optimization:** Understanding execution plans and proper indexing strategies.
+* **Data Visualization:** Python, Pandas, and Streamlit for interactive dashboard creation.
 
-Window Functions
+## 📊 Key Business Questions Answered
 
-Aggregate Functions
+* **Employee Analysis:** Who is the senior-most employee in the organization?
+* **Financial Trends:** What are the month-over-month revenue growth and 3-month rolling averages?
+* **Customer Behavior:** Who are the top-spending customers, and how can we segment them using Customer Lifetime Value (CLTV) quartiles?
+* **Geographic Insights:** Which countries generate the highest number of invoices and total spending?
 
-Subqueries
+## 🚀 Setup Instructions
 
-📊 Key Business Questions Answered
+### 1. Running the SQL Queries
+The SQL files in the `queries/` directory are written using standard ANSI SQL and are compatible with PostgreSQL and SQLite.
+You can run these scripts against your target database using any SQL IDE (e.g., DBeaver, pgAdmin) or via CLI:
+```bash
+sqlite3 mock.db < queries/02_invoice_analysis.sql
+```
 
-Who is the senior-most employee in the organization?
+### 2. Running the Interactive Dashboard
+To visualize the data locally via the provided Streamlit app:
 
-Which countries generate the highest number of invoices?
+1. Clone the repository and navigate to the project root.
+2. Install the necessary Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the Streamlit application:
+   ```bash
+   streamlit run visualizations/app.py
+   ```
 
-Who are the top-spending customers?
+## 📖 Documentation
+* [Database Architecture & ER Diagram](docs/architecture.md)
+* [SQL Performance Tuning Guidelines](docs/performance_tuning.md)
 
-Which artists and genres perform best across different countries?
-
-How does customer spending vary across regions?
-
-🚀 Key Achievements
-1️⃣ Senior Employee Identification
-
-Identified the senior-most employee based on job hierarchy
-
-Used ORDER BY level DESC with LIMIT 1 for accurate ranking
-
-2️⃣ Invoice & Revenue Analysis
-
-Analyzed invoice distribution by country
-
-Calculated highest invoice values using aggregate functions
-
-Identified top revenue-generating regions
-
-3️⃣ Customer Spending Insights
-
-Joined multiple tables to track customer purchase behavior
-
-Identified top customers based on total spend
-
-Used CTEs to simplify complex logic and improve readability
-
-4️⃣ Advanced Analytics with CTEs & Window Functions
-
-Determined best-selling artists globally
-
-Identified the most popular music genre per country
-
-Used window functions for ranking and partition-based analysis
-
-📈 Impact
-
-Automated complex analytical queries for repeatable analysis
-
-Improved query readability and maintainability using CTEs
-
-Delivered actionable insights useful for sales, marketing, and strategic planning
-
-📂 Project Structure
-├── queries/
-│   ├── employee_analysis.sql
-│   ├── invoice_analysis.sql
-│   ├── customer_insights.sql
-│   └── advanced_cte_analysis.sql
-├── README.md
-
-📎 Skills Demonstrated
-
-Advanced SQL querying
-
-Data analysis & business thinking
-
-Query optimization & structuring
-
-Analytical problem-solving
-
-📬 Contact
-
-If you’d like to discuss this project or collaborate on data analytics work, feel free to connect.
+## 📬 Contact
+If you’d like to discuss this project, SQL optimization, or collaborate on data analytics initiatives, feel free to connect!
