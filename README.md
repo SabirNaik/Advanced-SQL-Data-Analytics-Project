@@ -1,17 +1,60 @@
-# Advanced-SQL-Data-Analytics-Project
+# SQL Data Analytics Project
 
-Personal Project • [Jan 2024]
-Technologies: SQL (PostgreSQL]
+An end-to-end SQL data analytics project covering customer, invoice, and music genre analysis.
 
-Overview: Developed an end-to-end SQL project to perform advanced data analytics on a music/invoice dataset. The project involved designing queries to extract insights about employee hierarchy, invoice distributions, customer spending, and genre popularity.
+## Overview
 
-Key Achievements:
-Senior Employee Identification: Wrote queries to determine the senior-most employee based on job titles using an ORDER BY levels DESC LIMIT 1 approach.
+This repository demonstrates practical SQL data analytics using a music store dataset. The queries analyze employee hierarchies, invoice distributions, customer spending behavior, and popular genres using various SQL techniques, from basic aggregations to advanced analytical window functions and Common Table Expressions (CTEs).
 
-Invoice Analysis: Created aggregations to find which countries had the most invoices and calculated top invoice values.
+## Objectives
 
-Customer Insights: Joined multiple tables to identify top spending customers and analyze purchase trends using CTEs and window functions.
+The analysis answers key business questions such as:
+- Employee hierarchy: Identifying the most senior employee.
+- Invoice and revenue analysis: Determining the distribution of invoices across countries and cities, and locating top invoices.
+- Customer spending analysis: Discovering high-value customers and analyzing total expenditure on popular artists.
+- Music and genre analysis: Identifying the top rock bands, analyzing track lengths, and calculating the most popular genre by country.
 
-Advanced Analytics: Employed CTEs to determine best-selling artists and the most popular genres per country, demonstrating the use of window functions and grouping.
+## SQL Concepts Used
 
-Impact: Improved data retrieval efficiency and provided actionable business insights by automating complex queries and analysis.
+The SQL files demonstrate proficiency in the following concepts:
+- `SELECT`, `WHERE`, `GROUP BY`, `ORDER BY`, `LIMIT`
+- `JOIN`s (INNER JOIN)
+- Aggregate functions (`COUNT`, `SUM`, `AVG`, `ROUND`)
+- Subqueries
+- Common Table Expressions (CTEs)
+- Window functions (`ROW_NUMBER()`)
+
+## Project Structure
+
+```text
+.
+├── Project 1.sql      # Contains all the SQL queries answering analytical questions
+└── README.md          # Project documentation
+```
+
+## Analysis Covered
+
+### Employee Analysis
+Finds the most senior employee by evaluating job title levels.
+
+### Invoice Analysis
+Examines the geographic distribution of invoices and calculates top invoice values globally.
+
+### Customer Analysis
+Highlights the top spending customers overall and the top spender per country. It also targets specific demographics, like Rock music listeners.
+
+### Advanced SQL Analysis
+Uses CTEs and window functions to answer complex questions such as:
+- Identifying the best-selling artists by revenue.
+- Determining the most popular genre for each country based on purchases.
+- Ranking top customers by country using window functions.
+
+## Key SQL Techniques
+
+- **CTEs (Common Table Expressions):** Break down complex logic (e.g., finding a popular genre before joining back to customer data).
+- **ROW_NUMBER():** Ranks records within groups, specifically used to find the #1 genre or customer partitioned by country.
+- **Aggregations with JOINs:** Seamlessly combines data from `customer`, `invoice`, `invoice_line`, `track`, `album`, and `genre` tables to generate actionable insights.
+
+## Author
+
+Sabir Naik
